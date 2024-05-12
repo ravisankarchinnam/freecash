@@ -1,0 +1,1 @@
+echo “npm run format > .husky/pre-commit
