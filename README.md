@@ -12,6 +12,7 @@ This is a responsive website built using Typescript, React, Context API, Next.js
 <p align="center"><img src="screenshots/cashout-web.png" alt="cashout-page-web" /></p>
 <p align="center"><img src="screenshots/cashout-mobile.png" alt="cashout-page-mobile" /></p>
 <p align="center"><img src="screenshots/event-web.png" alt="event-page-web" /></p>
+<p align="center"><img src="screenshots/chat.png" alt="chat-web" /></p>
 
 ## Features
 
@@ -49,7 +50,7 @@ This is a responsive website built using Typescript, React, Context API, Next.js
 git clone https://github.com/ravisankarchinnam/freecash.git
 ```
 
-2. Add your keys to .env file in root directory
+2. Create a .env file in your root directory using .env.example
 
 ```bash
 #### STRAPI CMS ENV VARS ###
