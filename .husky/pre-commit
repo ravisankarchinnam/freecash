@@ -1,1 +1,1 @@
-echo “npm run format > .husky/pre-commit
+echo “npm run format” > .husky/pre-commit
