@@ -35,7 +35,8 @@ This is a responsive website built using Typescript, React, Context API, Next.js
 - [Material UI (v5.15.7)](https://mui.com/material-ui/getting-started/installation/)
 - [react-hook-form (v7.51.4)](https://react-hook-form.com/get-started#Quickstart/)
 - [yup (v1.4.0)](https://github.com/jquense/yup)
-- [axios (v.1.6.8)](https://axios-http.com/)
+- [axios (v1.6.8)](https://axios-http.com/)
+- [Date fns (v3.6.0)](https://date-fns.org/docs/Getting-Started#installation/)
 - [Strapi CMS](https://strapi.io/)
 
 ## Installation Steps
@@ -48,14 +49,14 @@ This is a responsive website built using Typescript, React, Context API, Next.js
 git clone https://github.com/ravisankarchinnam/freecash.git
 ```
 
-2. Create .env file in root directory using .env.example
+2. Add your keys to .env file in root directory
 
 ```bash
 #### STRAPI CMS ENV VARS ###
 STRAPI_API_KEY=[YOUR_STRAPI_API_KEY]
 
 # LOCALHOST ONLY VALUES #
-NEXT_PUBLIC_STRAPI_API_BASE_URL=[YOU_STRAPI_API_URL]
+NEXT_PUBLIC_STRAPI_API_BASE_URL=[YOUR_STRAPI_API_BASE_URL]
 ```
 
 3. Install dependencies
@@ -63,6 +64,7 @@ NEXT_PUBLIC_STRAPI_API_BASE_URL=[YOU_STRAPI_API_URL]
 ```bash
 npm install
 ```
+
 4. Run the app in dev mode
 
 ```bash
@@ -74,7 +76,6 @@ npm run dev
 ## Deployment
 
 This application is deployed to vercel, please use this link to access the site https://freecash.vercel.app/
-
 
 ### Enhancements
 
