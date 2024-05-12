@@ -1,6 +1,10 @@
+"use client";
+
 import { Box } from "@mui/material";
 import CardList from "@/components/ui/CardList";
 import { CardProps } from "@/components/ui/Card";
+import { MouseEvent } from "react";
+import { useAuth } from "@/contexts/AuthContext";
 
 type EarnContentOption = {
   title: string;
@@ -13,6 +17,13 @@ type EarnContentProps = {
 };
 
 const EarnContent = ({ partners }: EarnContentProps) => {
+  const { isAuthenticated, toggleAuthDialog } = useAuth();
+
+  const handleOnClick = (event: MouseEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    toggleAuthDialog()();
+  };
+
   return (
     <Box sx={{ px: 3 }}>
       {partners?.map((partner) => (
@@ -22,6 +33,7 @@ const EarnContent = ({ partners }: EarnContentProps) => {
           isScrollable
           noBorder
           hoverBlur
+          onListClick={!isAuthenticated ? handleOnClick : undefined}
         />
       ))}
     </Box>

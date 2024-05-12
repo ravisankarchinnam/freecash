@@ -13,7 +13,7 @@ import {
   footerInfoList,
   footerSocialIconList,
 } from "@/constants/footer";
-import Typography from "../../Typography";
+import Typography from "@/components/ui/Typography";
 
 const Footer = () => {
   return (

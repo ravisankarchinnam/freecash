@@ -11,6 +11,7 @@ import {
 import { Navigation } from "./Navigation";
 import { navOptions } from "@/constants/header";
 import Icons from "@/components/icons";
+import Auth from "@/components/global/Auth";
 
 const drawerWidth = 200;
 
@@ -63,7 +64,7 @@ const Header = ({
             <Icons.Logo />
           </Box>
           <Box display="flex" alignItems="center">
-            {"Buttons"}
+            <Auth />
             <IconButton
               aria-label="open drawer"
               edge="end"

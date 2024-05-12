@@ -16,6 +16,7 @@ const Spinner = () => {
             <Image
               src="/images/freecashLogo.svg"
               alt="spinner-logo"
+              width={500}
               height={65}
             />
           </Grid>

@@ -20,7 +20,7 @@ export type CardListProps = {
   noBorder?: boolean;
   hoverBlur?: boolean;
   scale?: boolean;
-  onListClick?: (event: MouseEvent) => void;
+  onListClick?: (event: MouseEvent<HTMLDivElement>) => void;
 };
 
 const RenderListComp = ({
