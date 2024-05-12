@@ -1,32 +1,42 @@
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import {
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 
 export type NavigationOption = {
-    label: string;
-    Icon: () => JSX.Element;
-    href: string;
-}
+  label: string;
+  Icon: () => JSX.Element;
+  href: string;
+};
 
 export type NavigationProps = {
-    options: NavigationOption[];
-}
+  options: NavigationOption[];
+};
 
-export const Navigation = ({options}: NavigationProps) => {
+export const Navigation = ({ options }: NavigationProps) => {
   const pathname = usePathname();
 
   return (
     <List>
-    {options.map(({label, Icon, href}) => (
+      {options.map(({ label, Icon, href }) => (
         <ListItem key={label}>
-            <ListItemButton LinkComponent={Link} href={href} selected={pathname === href}>
+          <ListItemButton
+            LinkComponent={Link}
+            href={href}
+            selected={pathname === href}
+          >
             <ListItemIcon>
-                <Icon />
+              <Icon />
             </ListItemIcon>
             <ListItemText primary={label} />
-            </ListItemButton>
+          </ListItemButton>
         </ListItem>
-    ))}
+      ))}
     </List>
-  )
-}
+  );
+};
