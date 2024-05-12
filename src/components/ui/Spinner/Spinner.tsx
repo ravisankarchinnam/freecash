@@ -13,7 +13,11 @@ const Spinner = () => {
       >
         <Grid item>
           <Grid>
-            <Image src="/freecashLogo.svg" alt="spinner-logo" height={65} />
+            <Image
+              src="/images/freecashLogo.svg"
+              alt="spinner-logo"
+              height={65}
+            />
           </Grid>
         </Grid>
         <Grid item>

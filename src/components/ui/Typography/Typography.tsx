@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import colors from "@/theme/colors";
 
-type TypographyProps = MuiTypographyProps & {
+export type TypographyProps = MuiTypographyProps & {
   isGradient?: boolean;
   backgroundSecondary?: boolean;
   isBold?: boolean;
