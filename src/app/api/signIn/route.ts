@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
     console.error("Error Sign In:", error);
     return NextResponse.json(
       { error: "An unexpected error occurred." },
-      { status: error.response?.status || 500 },
+      { status: error.response?.status || 500 }
     );
   }
 }

@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 const protectedRoutes = ["/profile"];
 
 export default async function middleware(
-  request: NextRequest,
+  request: NextRequest
 ): Promise<NextResponse> {
   const { pathname } = request.nextUrl.clone();
   const cookie = request.cookies.get(process.env.TOKEN as string);

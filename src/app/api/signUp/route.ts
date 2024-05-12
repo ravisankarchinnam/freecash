@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
       },
       {
         status: error.response?.status || 500,
-      },
+      }
     );
   }
 }

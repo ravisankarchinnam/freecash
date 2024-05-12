@@ -87,7 +87,7 @@ const CardComp = styled(MuiCard, {
         opacity: 1,
       },
     },
-  }),
+  })
 );
 
 const Card = (props: CardProps) => {

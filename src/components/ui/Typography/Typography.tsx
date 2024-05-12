@@ -43,7 +43,7 @@ const Text = styled(MuiTypography, {
     ...(isInlineBlock ? { display: "inline-block" } : undefined),
     ...(hasRadius ? { borderRadius: theme.spacing(1) } : undefined),
     ...(alignCenter ? { textAlign: "center" } : undefined),
-  }),
+  })
 );
 
 const Typography = (props: TypographyProps) => <Text {...props} />;
