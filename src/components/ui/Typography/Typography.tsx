@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Typography as MuiTypography,
   TypographyProps as MuiTypographyProps,
