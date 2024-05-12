@@ -1,45 +1,92 @@
-# Material UI - Next.js App Router example in TypeScript
+# Freecash
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped using [`create-next-app`](https://github.com/vercel/next.js/tree/HEAD/packages/create-next-app) with Material UI installed.
+This is a responsive website built using Typescript, React, Context API, Next.js server side rendering and Strapi CMS as the Api service provider. It is created to demonstrate the [freecash.com](https://freecash.com/) design with Next.js App Router.
 
-## How to use
+<h5>
+    <a href="https://freecash.vercel.app/" target="blank">Demo</a>
+</h5>
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+<p align="center"><img src="screenshots/auth.png" alt="auth" /></p>
+<p align="center"><img src="screenshots/earn-web.png" alt="earn-page-web" /></p>
+<p align="center"><img src="screenshots/earn-mobile.png" alt="earn-page-mobile" /></p>
+<p align="center"><img src="screenshots/cashout-web.png" alt="cashout-page-web" /></p>
+<p align="center"><img src="screenshots/cashout-mobile.png" alt="cashout-page-mobile" /></p>
+<p align="center"><img src="screenshots/event-web.png" alt="event-page-web" /></p>
 
-<!-- #default-branch-switch -->
+## Features
+
+- Server-side rendering
+- Responsive design Layout
+- User can Sign in and Sign out.
+- User can register in the application
+- User profile page as part of protected routes
+- Earn Page Design
+- Cashout Page Design
+- Event Page Design
+- Chat Design
+
+### Technologies
+
+- [Typescript](https://www.typescriptlang.org/)
+- [Node.js (v18.20.2)](https://nodejs.org/)
+- [Next.js 14 (App Router)](https://nextjs.org/docs/getting-started/installation/)
+- [React JS](https://reactjs.org/)
+- [Context API](https://reactjs.org/docs/context.html)
+- [Material UI (v5.15.7)](https://mui.com/material-ui/getting-started/installation/)
+- [react-hook-form (v7.51.4)](https://react-hook-form.com/get-started#Quickstart/)
+- [yup (v1.4.0)](https://github.com/jquense/yup)
+- [axios (v.1.6.8)](https://axios-http.com/)
+- [Strapi CMS](https://strapi.io/)
+
+## Installation Steps
+
+> Please before run the app, take into account to have a node.js v18 installed in your system locally.
+
+1. Clone the repository
 
 ```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/material-ui-nextjs-ts
-cd material-ui-nextjs-ts
+git clone https://github.com/ravisankarchinnam/freecash.git
 ```
 
-Install it and run:
+2. Create .env file in root directory using .env.example
+
+```bash
+#### STRAPI CMS ENV VARS ###
+STRAPI_API_KEY=[YOUR_STRAPI_API_KEY]
+
+# LOCALHOST ONLY VALUES #
+NEXT_PUBLIC_STRAPI_API_BASE_URL=[YOU_STRAPI_API_URL]
+```
+
+3. Install dependencies
 
 ```bash
 npm install
+```
+4. Run the app in dev mode
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> npm run build - which generates a next build folder with all the files ready for the deployment.
 
-or:
+## Deployment
 
-<!-- #default-branch-switch -->
+This application is deployed to vercel, please use this link to access the site https://freecash.vercel.app/
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-ui-nextjs-ts)
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/mui/material-ui/tree/master/examples/material-ui-nextjs-ts)
+### Enhancements
 
-## Learn more
+> - Implement APIs with GraphQL
+> - Setup real database instead of Strapi
+> - Chat Integration using sockets
+> - Integrate Redux toolkit
+> - Write unit tests & cypress test
+> - I18N for multiple languages
+> - dockerize the Application
+> - Lot more possibilities...
 
-To learn more about this example:
+## Author
 
-- [Next.js documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Customizing Material UI](https://mui.com/material-ui/customization/how-to-customize/) - approaches to customizing Material UI.
-
-## What's next?
-
-<!-- #default-branch-switch -->
-
-You now have a working example project.
-You can head back to the documentation and continue by browsing the [templates](https://mui.com/material-ui/getting-started/templates/) section.
+> Ravisankar Chinnam
