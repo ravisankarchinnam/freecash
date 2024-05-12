@@ -10,7 +10,7 @@
     "format": "prettier --write --ignore-path .gitignore .",
     "check": "prettier --check --ignore-path .gitignore .",
     "post-update": "echo \"codesandbox preview only, need an update\" && pnpm update --latest",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -30,7 +30,7 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "eslint-config-prettier": "^9.1.0",
-    "husky": "^9.0.11",
+    "husky": "^8.0.3",
     "prettier": "^3.2.5",
     "typescript": "latest"
   }
