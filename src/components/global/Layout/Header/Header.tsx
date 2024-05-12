@@ -12,6 +12,7 @@ import { Navigation } from "./Navigation";
 import { navOptions } from "@/constants/header";
 import Icons from "@/components/icons";
 import Auth from "@/components/global/Auth";
+import ChatDrawer from "./ChatDrawer";
 
 const drawerWidth = 200;
 
@@ -66,7 +67,7 @@ const Header = ({
           <Box display="flex" alignItems="center">
             <Auth />
             <IconButton
-              aria-label="open drawer"
+              aria-label="open chat"
               edge="end"
               onClick={toggleDrawerOpen}
               sx={{ ml: 2, display: { xs: "none", md: "inline-flex" } }}
@@ -81,9 +82,8 @@ const Header = ({
         sx={{
           width: drawerWidth,
           flexShrink: 0,
-          [`& .MuiDrawer-paper`]: {
+          "& .MuiDrawer-paper": {
             width: drawerWidth,
-            boxSizing: "border-box",
           },
           display: { xs: "none", md: "block" },
         }}
@@ -94,20 +94,11 @@ const Header = ({
         </Box>
       </Drawer>
       {children}
-      <Drawer
-        sx={{
-          width: chatDrawerWidth,
-          flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: chatDrawerWidth,
-          },
-        }}
-        variant="persistent"
-        anchor="right"
+      <ChatDrawer
         open={open}
-      >
-        Chat
-      </Drawer>
+        onClose={toggleDrawerOpen}
+        width={chatDrawerWidth}
+      />
     </>
   );
 };
