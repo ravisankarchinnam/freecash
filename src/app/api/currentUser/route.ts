@@ -6,7 +6,7 @@ export async function GET(request: NextRequest) {
   try {
     const cookie = request.cookies.get(process.env.TOKEN as string);
     const token = cookie?.value;
-    
+
     const userResponse = await strapiApiClient.get("/users/me?populate=*", {
       headers: {
         Authorization: `Bearer ${token}`,
