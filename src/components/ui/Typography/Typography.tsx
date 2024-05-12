@@ -14,6 +14,7 @@ export type TypographyProps = MuiTypographyProps & {
   isInlineBlock?: boolean;
   hasRadius?: boolean;
   alignCenter?: boolean;
+  truncate?: boolean;
 };
 
 const Text = styled(MuiTypography, {
@@ -23,7 +24,8 @@ const Text = styled(MuiTypography, {
     prop !== "isBold" &&
     prop !== "isInlineBlock" &&
     prop !== "hasRadius" &&
-    prop !== "alignCenter",
+    prop !== "alignCenter" &&
+    prop !== "truncate",
 })<TypographyProps>(
   ({
     theme,
@@ -33,6 +35,7 @@ const Text = styled(MuiTypography, {
     isInlineBlock,
     hasRadius,
     alignCenter,
+    truncate,
   }) => ({
     ...(isGradient ? { background: colors.text.gradient } : undefined),
     ...(isGradient ? { color: "transparent" } : undefined),
@@ -43,6 +46,13 @@ const Text = styled(MuiTypography, {
     ...(isInlineBlock ? { display: "inline-block" } : undefined),
     ...(hasRadius ? { borderRadius: theme.spacing(1) } : undefined),
     ...(alignCenter ? { textAlign: "center" } : undefined),
+    ...(truncate
+      ? {
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+        }
+      : undefined),
   })
 );
 

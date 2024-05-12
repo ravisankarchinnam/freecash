@@ -1,5 +1,6 @@
 import { Drawer } from "@mui/material";
 import useDrawerOutsideClick from "@/hooks/useDrawerOutsideClick";
+import ChatContent from "@/components/views/ChatContent";
 
 type ChatDrawerProps = {
   open: boolean;
@@ -8,24 +9,24 @@ type ChatDrawerProps = {
 };
 
 const ChatDrawer = ({ open, onClose, width }: ChatDrawerProps) => {
-  const {ref} = useDrawerOutsideClick(open, onClose);
+  const { ref } = useDrawerOutsideClick(open, onClose);
 
   return (
-      <Drawer
-        ref={ref}
-        variant={"persistent"}
-        anchor="right"
-        open={open}
-        sx={{
+    <Drawer
+      ref={ref}
+      variant={"persistent"}
+      anchor="right"
+      open={open}
+      sx={{
+        width,
+        flexShrink: 0,
+        "& .MuiDrawer-paper": {
           width,
-          flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width,
-          },
-        }}
-      >
-        Chat
-      </Drawer>
+        },
+      }}
+    >
+      <ChatContent />
+    </Drawer>
   );
 };
 
