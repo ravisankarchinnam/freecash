@@ -24,7 +24,7 @@ const ChatContent = () => {
       </Typography>
       <Divider sx={{ my: 1 }} />
       {chats?.map(({ id, createdAt, ...rest }) => (
-        <ChatCard key={id} time={format(new Date(), "hh:mm a")} {...rest} />
+        <ChatCard key={id} time={format(createdAt, "hh:mm a")} {...rest} />
       ))}
     </Box>
   );
