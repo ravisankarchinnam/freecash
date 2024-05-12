@@ -6,7 +6,8 @@ import theme from "@/theme";
 
 export const metadata: Metadata = {
   title: "Earn - Free cash",
-  description: "Öffne dein Profil, letzten Aufgaben und Statistiken auf Freecash.com",
+  description:
+    "Öffne dein Profil, letzten Aufgaben und Statistiken auf Freecash.com",
 };
 
 export default function RootLayout({
