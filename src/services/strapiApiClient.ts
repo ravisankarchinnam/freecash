@@ -5,10 +5,6 @@ const strapiApiUrl = process.env.NEXT_PUBLIC_STRAPI_API_BASE_URL;
 
 const strapiApiClient = axios.create({
   baseURL: strapiApiUrl,
-  // headers: {
-  //   'Content-Type': 'application/json',
-  //    Authorization: `Bearer Bearer ${strapiApiKey}`
-  // },
 });
 
 // Function to set the JWT token for subsequent requests

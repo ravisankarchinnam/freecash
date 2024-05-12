@@ -4,9 +4,12 @@ import strapiApiClient from "@/services/strapiApiClient";
 
 export async function GET(request: NextRequest) {
   try {
+    const cookie = request.cookies.get(process.env.TOKEN as string);
+    const token = cookie?.value;
+    
     const userResponse = await strapiApiClient.get("/users/me?populate=*", {
       headers: {
-        Authorization: `Bearer ${request.cookies.get("jwt")?.value}`,
+        Authorization: `Bearer ${token}`,
       },
     });
 
@@ -17,7 +20,7 @@ export async function GET(request: NextRequest) {
     }
   } catch (err) {
     const error = err as AxiosError;
-    return NextResponse.json(error.response?.data, {
+    return NextResponse.json(error.response?.data || {}, {
       status: error.response?.status || 500,
     });
   }
