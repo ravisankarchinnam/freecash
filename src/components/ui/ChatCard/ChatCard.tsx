@@ -27,12 +27,7 @@ const ChatCard = ({ imageUrl, username, message, time }: ChatCardProps) => {
               />
             </Grid>
             <Grid item xs={4}>
-              <Typography
-                variant="body2"
-                color="textSecondary"
-                isBold
-                truncate
-              >
+              <Typography variant="body2" color="textSecondary" isBold truncate>
                 {username}
               </Typography>
             </Grid>
