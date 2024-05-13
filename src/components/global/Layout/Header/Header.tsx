@@ -1,13 +1,5 @@
 import { ReactNode } from "react";
-import {
-  AppBar as MuiAppBar,
-  AppBarProps as MuiAppBarProps,
-  Drawer,
-  IconButton,
-  styled,
-  Toolbar,
-  Box,
-} from "@mui/material";
+import { AppBar, Drawer, IconButton, Toolbar, Box } from "@mui/material";
 import { Navigation } from "./Navigation";
 import { navOptions } from "@/constants/header";
 import Icons from "@/components/icons";
@@ -23,28 +15,6 @@ type HeaderProps = {
   children: ReactNode;
 };
 
-interface AppBarProps extends MuiAppBarProps {
-  open?: boolean;
-  chatDrawerWidth?: number | string;
-}
-
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== "open" && prop !== "chatDrawerWidth",
-})<AppBarProps>(({ theme, open, chatDrawerWidth }) => ({
-  transition: theme.transitions.create(["margin", "width"], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    width: `calc(100% - ${chatDrawerWidth}px)`,
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    marginRight: chatDrawerWidth,
-  }),
-}));
-
 const Header = ({
   open,
   toggleDrawerOpen,
@@ -54,11 +24,20 @@ const Header = ({
   return (
     <>
       <AppBar
-        open={open}
         position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
         elevation={0}
-        chatDrawerWidth={chatDrawerWidth}
+        sx={{
+          transition: "all ease-in-out",
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          width: {
+            ...(open
+              ? { xs: "100%", md: `calc(100% - ${chatDrawerWidth}px)` }
+              : undefined),
+          },
+          marginRight: {
+            ...(open ? { xs: 0, md: `${chatDrawerWidth}px` } : undefined),
+          },
+        }}
       >
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}>

@@ -55,7 +55,7 @@ const Footer = () => {
         </Grid>
       </Grid>
       <Divider />
-      <Box sx={{ px: 8, py: 3 }}>
+      <Box sx={{ px: 8, py: 3, mb: { xs: 10, md: 0 } }}>
         {footerSocialIconList?.map(({ Icon, link }) => (
           <IconButton key={link} href={link} sx={{ mx: 1 }}>
             <Icon />

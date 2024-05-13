@@ -21,7 +21,18 @@ const ChatDrawer = ({ open, onClose, width }: ChatDrawerProps) => {
         width,
         flexShrink: 0,
         "& .MuiDrawer-paper": {
-          width,
+          width: {
+            xs: "100%",
+            md: width,
+          },
+          mt: {
+            xs: 7,
+            md: 0,
+          },
+          pb: {
+            xs: 16,
+            md: 0,
+          },
         },
       }}
     >
