@@ -17,31 +17,37 @@ const ChatCard = ({ imageUrl, username, message, time }: ChatCardProps) => {
       }}
     >
       <Box sx={{ p: 1.5 }}>
-        <Grid container direction="column" spacing={1}>
-          <Grid item>
-            <Grid container alignItems="center" spacing={1} wrap="nowrap">
-              <Grid item>
-                <Avatar
-                  alt={username}
-                  src={imageUrl}
-                  sx={{ width: 30, height: 30 }}
-                />
-              </Grid>
-              <Grid item xs={4}>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  isBold
-                  truncate
-                >
-                  {username}
-                </Typography>
-              </Grid>
-              <Grid item xs={3} sx={{ ml: "auto" }}>
-                <Typography variant="caption" color="textSecondary">
-                  {time}
-                </Typography>
-              </Grid>
+        <Grid container direction="column" spacing={2}>
+          <Grid item container alignItems="center" spacing={1} wrap="nowrap">
+            <Grid item>
+              <Avatar
+                alt={username}
+                src={imageUrl}
+                sx={{ width: 30, height: 30 }}
+              />
+            </Grid>
+            <Grid item xs={4}>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+                isBold
+                truncate
+              >
+                {username}
+              </Typography>
+            </Grid>
+            <Grid
+              item
+              xs={3}
+              sx={{
+                ml: "auto",
+                display: "inline-flex",
+                justifyContent: "flex-end",
+              }}
+            >
+              <Typography variant="overline" color="textSecondary">
+                {time}
+              </Typography>
             </Grid>
           </Grid>
           <Grid item>
