@@ -1,32 +1,34 @@
 import Image from "next/image";
-import { CircularProgress, Container, Grid } from "@mui/material";
+import { Container, Box, CircularProgress } from "@mui/material";
 
 const Spinner = () => {
   return (
     <Container maxWidth="lg" sx={{ height: "100vh", display: "flex" }}>
-      <Grid
-        container
-        direction="column"
-        spacing={2}
-        justifyContent="center"
-        alignItems="center"
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+          width: "100%",
+          gap: 3,
+          p: 2,
+        }}
       >
-        <Grid item>
-          <Grid>
-            <Image
-              src="/images/freecashLogo.svg"
-              alt="spinner-logo"
-              width={500}
-              height={65}
-            />
-          </Grid>
-        </Grid>
-        <Grid item>
-          <Grid>
-            <CircularProgress color="secondary" />
-          </Grid>
-        </Grid>
-      </Grid>
+        <Box
+          sx={{
+            position: "relative",
+            maxHeight: 65,
+            maxWidth: 500,
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Image src="/images/freecashLogo.svg" alt="spinner-logo" fill />
+        </Box>
+        <CircularProgress color="secondary" />
+      </Box>
     </Container>
   );
 };
