@@ -1,5 +1,6 @@
 {
-  "name": "material-ui-nextjs-ts",
+  "name": "free-cash",
+  "description": "Responsive web app to demonstrate the freecash design with Next.js App Router",
   "version": "5.0.0",
   "private": true,
   "scripts": {
@@ -9,7 +10,6 @@
     "lint": "next lint",
     "format": "prettier --write --ignore-path .gitignore .",
     "check": "prettier --check --ignore-path .gitignore .",
-    "post-update": "echo \"codesandbox preview only, need an update\" && pnpm update --latest",
     "prepare": "husky install"
   },
   "dependencies": {
